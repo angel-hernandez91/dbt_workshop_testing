@@ -1,0 +1,8 @@
+dbtVersion: 1.0.1
+
+jobs:
+  - name: fivetran_log
+    schedule: 0 12 * * *
+    steps:
+      - name: fivetran_log model run
+        command: dbt run --models fivetran_log
